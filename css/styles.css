@@ -16,12 +16,13 @@ main {
 	margin: auto;
 	margin top: 35px; 
 	margin bottom: 35px;
+	padding-bottom: 10px;
 
 }
 
 h1 {
 
-	font-family: raleway;
+	font-family: "Raleway", sans-serif;
 	text-transform: uppercase;
 	color: #OD2C40;
 	letter-spacing: 1px;
@@ -32,7 +33,7 @@ h1 {
 
 h2 {
 
-	font-family: raleway;
+	font-family: "Raleway", sans-serif;
 	text-transform: uppercase;
 	color: #OD2C40;
 	letter-spacing: 1px;
@@ -42,7 +43,7 @@ h2 {
 
 p {
 
-	font-family: doroid serif;	
+	font-family: "Droid Serif", serif;
 	line height; 26px;
 	font-size:  18px;
 
@@ -50,7 +51,7 @@ p {
 
 a {
 
-	font-family: raleway;
+	font-family: "Raleway", sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #FFFFFF;
@@ -64,7 +65,7 @@ a {
 
 a:hover {
 		border-color: white;
-	}	
+}	
 	
 
 img {
@@ -84,13 +85,26 @@ nav {
 footer {
 
 	text-transform: uppercase;
-	padding; 0 20px 0 20px;
+	padding: 0 20px 0 20px;
 	background-color: #0D2C40;
 	color: white;
 	font-size: 14px
 	letter-spacing: 0.8em;
 	font-weight: 500;
-	font-family: raleway;
+	font-family: "Raleway", sans-serif;
+}
+
+form {
+	padding:20px;
+}
+
+button {
+	font-size: 15px;
+}
+
+.me {
+	color: black;
+	font-size: 10px;
 }
 
 .copyright {
@@ -103,7 +117,7 @@ footer {
 
 .clearfix:after {
 visibility: hidden;
-display: block;
+display: block; 
 content: " ";
 clear: both;
 height: 0;
@@ -113,4 +127,5 @@ font-size: 0;
 .name {
 	color: #F15B31;
 	font-weight: 700;
+
 }

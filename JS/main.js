@@ -1,5 +1,3 @@
-
-
 var cards = [
 {
 rank:"queen", 
@@ -23,7 +21,6 @@ cardImage:"images/king-of-diamonds.png"
 }
 
 ];
-
 var cardsInPlay = [];
 
 var checkForMatch = function () {
@@ -33,25 +30,31 @@ var checkForMatch = function () {
     alert("Sorry, try again.");
   }	
 };
-var flipCard = function (cardId) {
-	console.log("User flipped " + cards[cardId].rank);
+
+var flipCard = function () {
+	var cardId = this.getAttribute('data-id');
 	cardsInPlay.push(cards[cardId].rank);
+	console.log("User flipped " + cards[cardId].rank);
 	console.log(cards[cardId].cardImage);
 	console.log(cards[cardId].suit);
+	this.setAttribute('src', cards[cardId].cardImage);
 	if (cardsInPlay.length === 2) {
 		checkForMatch();
 	}
 };
 
-flipCard(0);
+var resetButton = function () {
+    document.getElementById("myForm").reset();
+}
 
-flipCard(2);
+var createBoard = function () {
+	for (var i = 0; i < cards.length; i ++) {
+	var cardElement = document.createElement('img');
+	cardElement.setAttribute('src','images/back.png');
+	cardElement.setAttribute('data-id',i);
+	cardElement.addEventListener("click", flipCard);
+	document.getElementById('game-board').appendChild(cardElement);
+	}
+}; 
 
-
-
-
-
-	
-
-
-
+createBoard();
